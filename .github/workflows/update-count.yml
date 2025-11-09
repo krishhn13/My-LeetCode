@@ -1,0 +1,24 @@
+name : Update Solved Count Badge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Count Problems
+        run: |
+          COUNT=$(ls -d LeetCode* 2>/dev/null | wc -l)
+          echo "Problems solved: $COUNT"
+          echo "![Problems Solved](https://img.shields.io/badge/Solved-$COUNT-blue?style=for-the-badge&logo=leetcode)" > solved_badge.md
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add solved_badge.md
+          git commit -m "Update solved count badge" || echo "No changes"
+          git push
