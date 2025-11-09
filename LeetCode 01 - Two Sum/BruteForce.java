@@ -1,5 +1,7 @@
 // Took 46ms and 46.42MB space
 // Beats 14.72% in time and 6.84% in memory
+
+// O(n^2) time, O(1) space
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         for(int i = 0; i < nums.length-1; i++) {
