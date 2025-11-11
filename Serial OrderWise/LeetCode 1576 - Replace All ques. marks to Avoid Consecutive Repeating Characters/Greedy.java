@@ -33,6 +33,6 @@ class Solution {
 public class Greedy {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-                System.out.println("j?qg??b");
+                System.out.println(sol.modifyString("j?qg??b"));
         }
 }
