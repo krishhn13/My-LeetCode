@@ -64,7 +64,7 @@ public class LeetCode19 {
         printList(head);
 
         Solution solution = new Solution();
-        int n = 2; // remove 2nd node from end (expected result: 1->2->3->5)
+        int n = 2; 
         ListNode result = solution.removeNthFromEnd(head, n);
 
         System.out.print("After removing " + n + "th from end: ");
