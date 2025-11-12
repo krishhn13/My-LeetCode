@@ -1,5 +1,3 @@
-// Time Complexity: O(max(n, m))
-// Space Complexity: O(max(n, m)) (or O(1) extra auxiliary space, besides output list)
 class ListNode {
     int val;
     ListNode next;
@@ -41,7 +39,7 @@ class Solution {
         return temp.next;
     }
 }
-public class Optimised {
+public class LeetCode02 {
         public static void main(String[] args) {
         Solution s = new Solution();
 
