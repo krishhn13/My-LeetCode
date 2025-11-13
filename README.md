@@ -25,28 +25,29 @@ Here's a snapshot of the problems I've tackled so far (auto-updated via GitHub A
 | Problem ID | Title | Difficulty | Key Concepts |
 |------------|-------|------------|--------------|
 | 01 | Two Sum | Easy | Array, Hash Table |
-| 02 | Add Two Numbers | Medium | Linked List, Math |
+| 02 | Add Two Numbers | Medium | Linked List, Math, Recursion |
 | 03 | Longest Substring Without Repeating Characters | Medium | Hash Table, String, Sliding Window |
-| 04 | Median of Two Sorted Arrays | Hard | Array, Binary Search, Divide and Conquer |
-| 07 | Reverse Integer | Easy | Math |
+| 04 | Median Of Two Sorted Arrays | Hard | Array, Binary Search, Divide and Conquer |
+| 07 | Reverse Integer | Medium | Math |
 | 09 | Palindrome Number | Easy | Math |
-| 13 | Roman to Integer | Easy | Hash Table, Math, String |
+| 13 | Roman To Integer | Easy | Hash Table, Math, String |
 | 14 | Longest Common Prefix | Easy | Array, String, Trie |
-| 17 | Letter Combinations of a Phone Number | Medium | Backtracking, Depth-First Search, Recursion, String |
-| 20 | Valid Parentheses | Easy | Stack, String |
-| 27 | Remove Element | Easy | Array, Two Pointers |
-| 28 | Find the Index of the First Occurrence in a String | Easy | String |
-| 31 | Next Permutation | Medium | Array |
-| 70 | Climbing Stairs | Easy | Dynamic Programming, Math, Memoization |
-| 118 | Pascal's Triangle | Easy | Array, Dynamic Programming |
-| 119 | Pascal's Triangle II | Easy | Array, Dynamic Programming |
-| 153 | Find Minimum in Rotated Sorted Array | Medium | Array, Binary Search |
-| 154 | Find Minimum in Rotated Sorted Array II | Hard | Array, Binary Search |
-| 455 | Assign Cookies | Easy | Array, Greedy, Sorting |
-| 509 | Fibonacci Number | Easy | Array, Dynamic Programming, Math, Memoization |
-| 1576 | Replace All ?'s to Avoid Consecutive Repeating Characters | Medium | Dynamic Programming, String |
-| 3228 | Maximum Number of Operations to Move Ones to the End | Medium | Array, Greedy, Prefix Sum |
-<!-- END PROBLEMS TABLE -->
+| 17 | Letter Combinations Of A Phone Number | Medium | Hash Table, String, Backtracking |
+| 20 | Valid Parentheses | Easy | String, Stack |
+| 27 | Remove Elements | Unknown | Unknown |
+| 28 | Find the Index of the First Occurrence in a String | Easy | Two Pointers, String, String Matching |
+| 31 | Next Permutation | Medium | Array, Two Pointers |
+| 37 | Sudoku Solver | Hard | Array, Hash Table, Backtracking, Matrix |
+| 70 | Climbing Stairs | Easy | Math, Dynamic Programming, Memoization |
+| 118 | Pascal's Triangle | Unknown | Unknown |
+| 119 | Pascal's Triangle II | Unknown | Unknown |
+| 153 | Find Minimum In Rotated Sorted Array | Medium | Array, Binary Search |
+| 154 | Find Minimum In Rotated Sorted Array II | Hard | Array, Binary Search |
+| 455 | Assign Cookies | Easy | Array, Two Pointers, Greedy, Sorting |
+| 509 | Fibonacci Number | Easy | Math, Dynamic Programming, Recursion, Memoization |
+| 1576 | Replace All ques. marks to Avoid Consecutive Repeating Characters | Unknown | Unknown |
+| 3228 |  Maximum Number of Operations to Move Ones to the End | Unknown | Unknown |
+
 
 *Note: Difficulty levels and key concepts are fetched from LeetCode. More problems incoming!*
 
