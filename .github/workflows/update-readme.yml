@@ -1,0 +1,123 @@
+name: Update README Table
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Serial OrderWise/**'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Create update script
+        run: |
+          cat > update_table.py << 'EOF'
+          import os
+          import re
+          import requests
+
+          # GraphQL query for LeetCode problem data
+          query = '''
+          query questionData($titleSlug: String!) {
+            question(titleSlug: $titleSlug) {
+              questionId
+              title
+              difficulty
+              topicTags {
+                name
+              }
+            }
+          }
+          '''
+
+          # List Serial OrderWise subdirectories
+          serial_dir = 'Serial OrderWise'
+          problems = []
+          if os.path.exists(serial_dir):
+              folders = [f for f in os.listdir(serial_dir) if os.path.isdir(os.path.join(serial_dir, f))]
+              # Sort by problem ID numerically
+              folders.sort(key=lambda x: int(re.match(r'LeetCode (\d+)', x).group(1)) if re.match(r'LeetCode (\d+)', x) else 999)
+              for folder in folders:
+                  match = re.match(r'LeetCode (\d+) - (.*)', folder.strip())
+                  if match:
+                      problem_id = match.group(1)
+                      title = match.group(2)
+                      title_slug = re.sub(r'\s+', '-', title.lower()).rstrip('-')
+
+                      # Fetch from LeetCode API
+                      headers = {'Content-Type': 'application/json'}
+                      data = {'query': query, 'variables': {'titleSlug': title_slug}}
+                      try:
+                          resp = requests.post('https://leetcode.com/graphql', json=data, headers=headers, timeout=10)
+                          if resp.status_code == 200:
+                              result = resp.json().get('data', {}).get('question', {})
+                              difficulty = result.get('difficulty', 'Unknown')
+                              topics = ', '.join(tag['name'] for tag in result.get('topicTags', []))
+                          else:
+                              difficulty = 'Unknown'
+                              topics = 'Unknown'
+                      except Exception:
+                          difficulty = 'Unknown'
+                          topics = 'Unknown'
+
+                      problems.append({'id': problem_id, 'title': title, 'difficulty': difficulty, 'key_concepts': topics})
+
+          # Generate table Markdown
+          if problems:
+              header = '| Problem ID | Title | Difficulty | Key Concepts |'
+              separator = '|------------|-------|------------|--------------|'
+              rows = [f'| {p["id"]} | {p["title"]} | {p["difficulty"]} | {p["key_concepts"]} |' for p in problems]
+              table = '\n'.join([header, separator] + rows)
+          else:
+              table = '# No problems yet'
+
+          # Read README.md and replace table
+          readme_path = 'README.md'
+          if not os.path.exists(readme_path):
+              print('README.md not found!')
+              exit(1)
+
+          with open(readme_path, 'r') as f:
+              content = f.read()
+
+          start_marker = '<!-- START PROBLEMS TABLE -->'
+          end_marker = '<!-- END PROBLEMS TABLE -->'
+          start_idx = content.find(start_marker)
+          end_idx = content.find(end_marker)
+          if end_idx != -1:
+              end_idx += len(end_marker)
+
+          if start_idx != -1 and end_idx != -1:
+              new_content = content[:start_idx + len(start_marker) + 1] + table + '\n' + content[end_idx:]
+              with open(readme_path, 'w') as f:
+                  f.write(new_content)
+              print('README updated successfully!')
+          else:
+              print('Markers not found in README.md')
+          EOF
+
+      - name: Run update script
+        run: python update_table.py
+
+      - name: Commit changes if any
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Update problems table with latest solutions [skip ci]" || exit 0
+            git push
+          else
+            echo "No changes to commit"
+          fi
