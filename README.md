@@ -52,30 +52,35 @@ Here's a snapshot of the problems I've tackled so far (auto-updated via GitHub A
 
 ## 🎯 Topics Covered
 
+This table is auto-updated via GitHub Actions based on the `Topic Wise/` structure—listing topics alphabetically, sample problems (from file names like `LeetCode70.java`), and file counts.
+
+<!-- START TOPICS TABLE -->
 | Topic | Problems Included | Files |
 |-------|-------------------|-------|
-| **Dynamic Programming** | (Various, e.g., 70, 118, 119, 509, 1576) | Multiple `.java` files |
+| **Dynamic Programming** | (Various, e.g., 70, 118, 119, 509, 1576) | 5 `.java` files |
 | **Graphs** | (Coming soon!) | 0 (placeholder) |
 | **Greedy** | 455, 1576, 3228 | 3 `.java` files |
 | **Linked List** | (Coming soon!) | 0 (placeholder) |
 | **Queues and Backtracking** | (Coming soon!) | 0 (placeholder) |
-| **Recursion and Backtracking** | (e.g., 17) | Multiple `.java` files |
-| **Stacks** | (e.g., 20) | Multiple `.java` files |
+| **Recursion and Backtracking** | (e.g., 17) | 1 `.java` file |
+| **Stacks** | (e.g., 20) | 1 `.java` file |
 | **Trees** | (Coming soon!) | 0 (placeholder) |
+<!-- END TOPICS TABLE -->
 
 This section will expand as I solve more problems across topics like Arrays, Trees, Graphs, DP, and more.
 
 ## 🚀 How to Use
 
 1. **Clone the Repo**:
-```git clone https://github.com/krishhn13/My-LeetCode.git
-cd My-LeetCode```
-
+   ```
+   git clone https://github.com/krishhn13/My-LeetCode.git
+   cd My-LeetCode
+   ```
 
 2. **Run a Solution** (e.g., Two Sum):
-- Navigate to `Serial OrderWise/LeetCode 01 - Two Sum/`.
-- Compile: `javac Optimised.java`
-- Run: `java Solution` (add your main method or use an IDE like IntelliJ/VS Code for testing).
+   - Navigate to `Serial OrderWise/LeetCode 01 - Two Sum/`.
+   - Compile: `javac Optimised.java`
+   - Run: `java Solution` (add your main method or use an IDE like IntelliJ/VS Code for testing).
 
 3. **IDE Recommendations**: Use IntelliJ IDEA, Eclipse, or VS Code with Java extensions for easy debugging.
 
@@ -101,9 +106,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: Krishan Kumar Sah [](https://github.com/krishhn13)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile) (add if available)
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **Author**: Krishan Kumar Sah ([krishhn13](https://github.com/krishhn13))
+- **LinkedIn**: [linkedin.com/in/krishn13](https://linkedin.com/in/krishn13) 
+- **Email**: [krishankumarsah13@gmail.com](mailto:krishankumarsah13@gmail.com)
 
 Happy coding! Let's crush those interviews together. 💪
 
