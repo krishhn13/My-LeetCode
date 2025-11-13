@@ -4,7 +4,7 @@
 
 Hi! 👋 I'm **Krishan Kumar Sah**, a passionate developer honing my skills through daily LeetCode challenges. This repository is my personal collection of solutions to LeetCode problems, implemented primarily in **Java**. I aim to solve problems regularly, focusing on clean, efficient code with explanations for different approaches (e.g., brute-force vs. optimized).
 
-Whether you're preparing for coding interviews or just want to practice algorithms, feel free to explore, fork, or contribute! Solutions are organized for easy navigation—both by problem ID and by topic.
+Whether you're preparing for coding interviews or just want to practice algorithms, feel free to explore, fork, or contribute! Solutions are organized for easy navigation - both by problem ID and by topic.
 
 ## 📁 Repository Structure
 
