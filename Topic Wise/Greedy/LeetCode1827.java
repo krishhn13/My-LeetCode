@@ -11,7 +11,7 @@ class Solution {
                 }
                 return count;
         }
-
+}
 public class LeetCode1827 {
          public static void main(String[] args) {
                 Solution sol = new Solution();
