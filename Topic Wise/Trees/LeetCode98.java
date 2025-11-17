@@ -1,4 +1,3 @@
-import java.util.*;
 class TreeNode {
         int val;
         TreeNode left;
@@ -29,8 +28,6 @@ class Solution {
 public class LeetCode98 {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-
-                // Example 1: valid BST [2,1,3]
                 TreeNode root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
                 System.out.println("Tree 1 is valid BST: " + sol.isValidBST(root1)); // true
 
