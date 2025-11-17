@@ -30,8 +30,6 @@ public class LeetCode98 {
                 Solution sol = new Solution();
                 TreeNode root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
                 System.out.println("Tree 1 is valid BST: " + sol.isValidBST(root1)); // true
-
-                // Example 2: invalid BST [5,1,4,null,null,3,6]
                 TreeNode root2 = new TreeNode(5,
                                 new TreeNode(1),
                                 new TreeNode(4, new TreeNode(3), new TreeNode(6))
