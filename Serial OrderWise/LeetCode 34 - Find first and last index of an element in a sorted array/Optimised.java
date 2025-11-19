@@ -25,7 +25,7 @@ class Solution {
                 ans = -1;
 
                 // Searching for the last element
-                while (start <= end) { // Changed from `while (start < end)`
+                while (start <= end) {
                         int mid = start + (end - start) / 2;
                         if (nums[mid] == target) {
                                 ans = mid;
