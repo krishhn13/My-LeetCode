@@ -1,7 +1,6 @@
 class Solution {
     public String reformatDate(String date) {
         String[] ans = date.split(" ");
-        // System.out.println(Arrays.toString(ans));
         StringBuilder str = new StringBuilder();
         str.append(ans[2]);
         str.append("-");
