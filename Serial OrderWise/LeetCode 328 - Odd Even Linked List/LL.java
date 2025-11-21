@@ -14,6 +14,7 @@ class ListNode {
                 this.next = next;
         }
 }
+
 class Solution {
         public ListNode oddEvenList(ListNode head) {
                 if (head == null || head.next == null)
@@ -33,7 +34,7 @@ class Solution {
 }
 
 public class LL {
-public static void main(String[] args) {
+        public static void main(String[] args) {
                 // Example: build list 1->2->3->4->5
                 ListNode n1 = new ListNode(1);
                 ListNode n2 = new ListNode(2);
