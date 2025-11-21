@@ -29,18 +29,16 @@ class Solution {
         }
 }
 
-
-
 public class Graph {
-         public static void main(String[] args) {
+        public static void main(String[] args) {
                 Solution sol = new Solution();
-                int[][] graph = { 
-                        { 1, 2, 3 }, 
-                        { 0, 2 },
-                        { 0, 1, 3 },
-                        { 0, 2 } 
+                int[][] graph = {
+                                { 1, 2, 3 },
+                                { 0, 2 },
+                                { 0, 1, 3 },
+                                { 0, 2 }
                 };
                 System.out.println(sol.isBipartite(graph));
-        
+
         }
 }
