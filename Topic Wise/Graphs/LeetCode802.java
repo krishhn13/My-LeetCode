@@ -41,5 +41,19 @@ class Solution {
 }
 
 public class LeetCode802 {
-        
+        public static void main(String[] args) {
+                Solution sol = new Solution();
+                int[][] graph = {
+                        {1, 2},
+                        {2, 3},
+                        {5},
+                        {0},
+                        {5},
+                        {},
+                        {}
+                };
+
+                List<Integer> safeNodes = sol.eventualSafeNodes(graph);
+                System.out.println(safeNodes);
+        }
 }
