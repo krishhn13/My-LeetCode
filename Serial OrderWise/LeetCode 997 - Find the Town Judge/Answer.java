@@ -19,7 +19,9 @@ class Solution {
 public class Answer {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-                int[][] trust = { { 1, 2 } };
+                int[][] trust = { 
+                        { 1, 2 } 
+                };
                 System.out.println(sol.findJudge(2, trust));
         }
 }
