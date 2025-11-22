@@ -1,5 +1,4 @@
 import java.util.*;
-
 class Solution {
         public List<Integer> eventualSafeNodes(int[][] graph) {
                 int V = graph.length;
