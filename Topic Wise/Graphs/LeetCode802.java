@@ -5,13 +5,11 @@ class Solution {
                 int[] visited = new int[V];
                 int[] pathVis = new int[V];
                 int[] check = new int[V];
-
                 for (int i = 0; i < V; i++) {
                         if (visited[i] == 0) {
                                 dfs(i, graph, visited, pathVis, check);
                         }
                 }
-
                 List<Integer> safeList = new ArrayList<>();
                 for (int i = 0; i < V; i++) {
                         if (check[i] == 1)
