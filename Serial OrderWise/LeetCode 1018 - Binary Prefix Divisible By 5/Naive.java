@@ -13,6 +13,6 @@ class Solution {
 public class Naive {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-                System.out.println(prefixesDivBy5(new int[]{0,1,1}));
+                System.out.println(sol.prefixesDivBy5(new int[]{0,1,1}));
         }    
 }
