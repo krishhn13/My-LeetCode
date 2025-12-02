@@ -1,9 +1,6 @@
 class Solution {
     public int maximumUnits(int[][] boxTypes, int truckSize) {
         Arrays.sort(boxTypes,(a,b)->b[1]-a[1]);
-        // for(int[]i : boxTypes)  {
-        //     System.out.println(Arrays.toString(i));
-        // }
         int ans = 0;
         int indx = 0;
         while(indx<boxTypes.length && truckSize>0){
