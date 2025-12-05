@@ -20,7 +20,6 @@ class Solution {
                 }
                 int number = digits.charAt(index) - '0';
                 String value = mapping[number];
-
                 for (int i = 0; i < value.length(); i += 1) {
                         output += value.charAt(i);
                         solve(digits, ans, index + 1, output, mapping);
