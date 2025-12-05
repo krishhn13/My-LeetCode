@@ -15,12 +15,10 @@ class Solution {
         }
 
         void solve(String digits, List<String> ans, int index, String output, String[] mapping) {
-
                 if (index >= digits.length()) {
                         ans.add(output);
                         return;
                 }
-
                 int number = digits.charAt(index) - '0';
                 String value = mapping[number];
 
