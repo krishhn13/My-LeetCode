@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     String b;
     List<List<String>> list = new ArrayList<>();
@@ -30,11 +31,11 @@ class Solution {
                     for(char c = 'a';c<='z';c++) {
                         char[] charSeq = val.toCharArray();
                         charSeq[i] = c;
-                        String aalu = new String(charSeq);
-                        if(set.contains(aalu)) {
-                            map.put(aalu,level+1);
-                            q.add(aalu);
-                            set.remove(aalu);
+                        String wordDemo = new String(charSeq);
+                        if(set.contains(wordDemo)) {
+                            map.put(wordDemo,level+1);
+                            q.add(wordDemo);
+                            set.remove(wordDemo);
                         }
                     }
                 }
