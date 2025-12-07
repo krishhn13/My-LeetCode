@@ -1,17 +1,14 @@
 import java.util.*;
-
 class DS {
         int extras = 0;
         List<Integer> parent = new ArrayList<>();
         List<Integer> size = new ArrayList<>();
-
         DS(int n) {
                 for (int i = 0; i <= n; i += 1) {
                         parent.add(i);
                         size.add(1);
                 }
         }
-
         int findPar(int node) {
                 if (node == parent.get(node)) {
                         return node;
@@ -20,7 +17,6 @@ class DS {
                 parent.set(node, root);
                 return root;
         }
-
         void union(int src, int des) {
                 int pu = findPar(src);
                 int pv = findPar(des);
@@ -37,7 +33,6 @@ class DS {
                 }
         }
 }
-
 public class Solution {
         public int makeConnected(int n, int[][] connections) {
                 DS ds = new DS(n);
