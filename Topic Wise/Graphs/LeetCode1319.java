@@ -49,5 +49,9 @@ class Solution {
     }
 }
 public class LeetCode1319 {
-        
+        public static void main(String[] args) {
+                Solution sol = new Solution();
+                int[][] edges = {{0,1},{0,2},{1,2}};
+                System.out.println(sol.makeConnected(4, edges));
+        }       
 }
