@@ -23,5 +23,8 @@ class Solution {
 }
 
 public class Answer {
-
+        public static void main(String[] args) {
+                Solution sol = new Solution();
+                System.out.println(sol.sortByReflection(new int[]{4,5,4}));
+        }
 }
