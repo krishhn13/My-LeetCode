@@ -1,5 +1,5 @@
 import java.util.*;
-
+// this is memoization code for climbing stairs, with a lil variation, you can do the bottom up approach as well    
 class Solution {
     public int climbStairs(int n) {
         int[] dp = new int[n+2];
