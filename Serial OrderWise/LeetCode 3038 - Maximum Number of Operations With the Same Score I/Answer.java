@@ -4,10 +4,8 @@ class Solution {
                 int score = nums[0] + nums[1];
                 for (int i = 2; i < nums.length - 1; i += 2) {
                         int abhi = nums[i] + nums[i + 1];
-                        if (score == abhi)
-                                cnt++;
-                        else
-                                break;
+                        if (score == abhi) cnt++;
+                        else break;
                 }
                 return cnt;
         }
