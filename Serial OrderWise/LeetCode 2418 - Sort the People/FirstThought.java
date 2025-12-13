@@ -1,5 +1,4 @@
 import java.util.*;
-
 class Solution {
         public String[] sortPeople(String[] names, int[] heights) {
                 Map<Integer, Integer> map = new LinkedHashMap<>();
