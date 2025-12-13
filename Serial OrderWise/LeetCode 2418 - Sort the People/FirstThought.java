@@ -8,7 +8,6 @@ class Solution {
                 }
                 List<Integer> list = new ArrayList<>(map.values());
                 Collections.sort(list, Collections.reverseOrder());
-                // String[] ans = new String[names.length];
                 int k = 0;
                 for (int i : map.keySet()) {
                         map.put(i, list.get(k));
