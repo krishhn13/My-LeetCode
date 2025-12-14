@@ -1,27 +1,35 @@
 class TreeNode {
     int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 public class Solution {
     int pIndex = 0;
 
-    int findPosition(int[] inorder, int element){
-        for(int i = 0; i < inorder.length; i++){
-            if(inorder[i] == element) return i;
+    int findPosition(int[] inorder, int element) {
+        for (int i = 0; i < inorder.length; i++) {
+            if (inorder[i] == element)
+                return i;
         }
         return -1;
     }
 
-    TreeNode solve(int[] inorder, int[] preorder, int iStart, int iEnd){
-        if(pIndex >= preorder.length || iStart > iEnd){
+    TreeNode solve(int[] inorder, int[] preorder, int iStart, int iEnd) {
+        if (pIndex >= preorder.length || iStart > iEnd) {
             return null;
         }
 
@@ -39,4 +47,3 @@ public class Solution {
         return solve(inorder, preorder, 0, inorder.length - 1);
     }
 }
-
