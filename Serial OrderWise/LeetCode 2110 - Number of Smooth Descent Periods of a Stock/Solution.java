@@ -1,5 +1,4 @@
-
-public class Solution {
+class Solution {
         public long getDescentPeriods(int[] prices) {
                 long cnt = 0;
                 long n = 1;
