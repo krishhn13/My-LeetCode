@@ -26,6 +26,6 @@ class Solution {
 public class Memoized {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-                sol.longestCommonSubsequence("abcdefgh", "abcdhreg");
+                System.out.println(sol.longestCommonSubsequence("abcdefgh", "abcdhreg"));
         }
 }
