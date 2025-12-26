@@ -1,4 +1,6 @@
 // LC 1092 - Marked As Hard
+// Time : O(m*n)
+// Space : O(m*n)
 class Solution {
         public String shortestCommonSupersequence(String s1, String s2) {
                 int m = s1.length(), n = s2.length();
