@@ -1,3 +1,4 @@
+// LC HARD
 class Solution {
         public int minInsertions(String s) {
                 int n = s.length();
