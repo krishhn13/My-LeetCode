@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Solution {
     public int minMirrorPairDistance(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
