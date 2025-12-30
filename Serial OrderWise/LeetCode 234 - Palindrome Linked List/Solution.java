@@ -1,29 +1,39 @@
 import java.util.*;
+
 //  Definition for singly-linked list.
- class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
+class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+                this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+                this.val = val;
+                this.next = next;
+        }
+}
 
 class Solution {
-    public boolean isPalindrome(ListNode head) {
-        Stack<Integer> stack = new Stack<>();
-        ListNode temp = head;
-        while(temp!=null) {
-            stack.push(temp.val);
-            temp = temp.next;
+        public boolean isPalindrome(ListNode head) {
+                Stack<Integer> stack = new Stack<>();
+                ListNode temp = head;
+                while (temp != null) {
+                        stack.push(temp.val);
+                        temp = temp.next;
+                }
+                temp = head;
+                while (temp != null) {
+                        if (stack.peek() != temp.val) {
+                                return false;
+                        }
+                        stack.pop();
+                        temp = temp.next;
+                }
+                return true;
         }
-        temp = head;
-        while(temp!=null) {
-            if(stack.peek()!=temp.val) {
-                return false;
-            }
-            stack.pop();
-            temp = temp.next;
-        }
-        return true;
-    }
 }
