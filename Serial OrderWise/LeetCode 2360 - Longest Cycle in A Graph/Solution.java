@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     Map<Integer,List<Integer>> map = new HashMap<>();
     int maxLen = -1;
