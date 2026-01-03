@@ -46,6 +46,7 @@ class Solution extends GuessGame {
 }
 
 public class Answer {
+        @SuppressWarnings("unused")
         public static void main(String[] args) {
                 GuessGame guessGame = new GuessGame(6);
                 Solution sol = new Solution();
