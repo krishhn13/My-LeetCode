@@ -1,7 +1,6 @@
 import java.util.*;
 class Pair {
         int node, time;
-
         Pair(int time, int node) {
                 this.time = time;
                 this.node = node;
