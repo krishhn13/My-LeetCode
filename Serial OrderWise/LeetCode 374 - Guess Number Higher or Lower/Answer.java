@@ -9,7 +9,7 @@
  */
 class GuessGame {
         int pick;
-
+        
         GuessGame() {
 
         }
