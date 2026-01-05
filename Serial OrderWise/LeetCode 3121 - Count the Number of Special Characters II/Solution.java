@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int numberOfSpecialChars(String word) {
         Map<Character,Integer> map = new HashMap<>();
