@@ -31,7 +31,8 @@ public class Solution {
                 if (s1.charAt(n - 1) == s2.charAt(m - 1)) {
                         return dp[n][m] = (int) s1.charAt(n - 1) + solve(s1, s2, n - 1, m - 1);
                 } else {
-                        return dp[n][m] = Math.max(solve(s1, s2, n - 1, m), solve(s1, s2, n, m - 1));
+                        return dp[n][m] = Math.max(solve(s1, s2, n - 1, m), 
+                                                   solve(s1, s2, n, m - 1));
                 }
         }
 }
