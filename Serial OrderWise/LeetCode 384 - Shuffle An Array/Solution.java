@@ -1,13 +1,17 @@
 import java.util.*;
 
 class Solution {
+        int n, max;
+        int min = 0;
         int[] arr, org;
-        int n;
+        Random rand;
 
         public Solution(int[] nums) {
                 n = nums.length;
-                org = Arrays.copyOf(nums, n);
+                max = n - 1;
                 arr = Arrays.copyOf(nums, n);
+                org = Arrays.copyOf(nums, n);
+                rand = new Random();
         }
 
         public int[] reset() {
@@ -16,8 +20,6 @@ class Solution {
         }
 
         public int[] shuffle() {
-                Random rand = new Random();
-                int min = 0, max = n - 1;
                 for (int i = 0; i < n; i++) {
                         int idx = rand.nextInt(max - min + 1) + min;
                         int ele = arr[idx];
