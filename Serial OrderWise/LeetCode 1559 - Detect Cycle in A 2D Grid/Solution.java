@@ -1,4 +1,4 @@
-class Solution {
+public class Solution {
         boolean[][] visited;
         int n, m;
 
