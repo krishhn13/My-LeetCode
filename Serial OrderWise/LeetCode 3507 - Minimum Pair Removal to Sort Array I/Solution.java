@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
         int count = 0;
-
         public int minimumPairRemoval(int[] nums) {
                 List<Integer> list = new ArrayList<>();
                 for (int i : nums) {
