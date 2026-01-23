@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
         public int centeredSubarrays(int[] nums) {
                 int ans = 0;
@@ -17,13 +19,13 @@ class Solution {
 }
 
 public class LC3804 {
-        
+
         public static void main(String[] args) {
                 Solution sol = new Solution();
-        
-                int[] nums = {1, 2, 3, 3, 2, 1};
+
+                int[] nums = { 1, 2, 3, 3, 2, 1 };
                 int result = sol.centeredSubarrays(nums);
-        
+
                 System.out.println(result);
         }
 }
