@@ -2,6 +2,7 @@ import java.util.*;
 
 class Solution {
         int count = 0;
+
         public int minimumPairRemoval(int[] nums) {
                 List<Integer> list = new ArrayList<>();
                 for (int i : nums) {
@@ -35,19 +36,21 @@ class Solution {
                 return true;
         }
 }
+
 public class LC3507 {
-        
+
 }
+
 class Main {
         public static void main(String[] args) {
                 Solution sol = new Solution();
 
                 int[][] tests = {
-                                {3, 2, 1, 4},
-                                {1, 2, 3, 4},
-                                {5, 4, 3, 2, 1},
-                                {2, 2, 2, 2},
-                                {10, 1, 9, 2, 8}
+                                { 3, 2, 1, 4 },
+                                { 1, 2, 3, 4 },
+                                { 5, 4, 3, 2, 1 },
+                                { 2, 2, 2, 2 },
+                                { 10, 1, 9, 2, 8 }
                 };
 
                 for (int[] nums : tests) {
