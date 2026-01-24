@@ -14,5 +14,22 @@ class Solution {
         }
 }
 public class LeetCode3732 {
-        
+
+        public static void main(String[] args) {
+                Solution sol = new Solution();
+
+                // If numbers are provided as command-line args, use them; otherwise run a small demo.
+                int[] nums;
+                if (args != null && args.length > 0) {
+                        nums = new int[args.length];
+                        for (int i = 0; i < args.length; i++) {
+                                nums[i] = Integer.parseInt(args[i]);
+                        }
+                } else {
+                        nums = new int[] { -10, 3, 5, -2 };
+                }
+
+                long ans = sol.maxProduct(nums);
+                System.out.println(ans);
+        }
 }
