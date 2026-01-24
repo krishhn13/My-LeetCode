@@ -27,7 +27,6 @@ public class LeetCode3732 {
                 } else {
                         nums = new int[] { -10, 3, 5, -2 };
                 }
-
                 long ans = sol.maxProduct(nums);
                 System.out.println(ans);
         }
