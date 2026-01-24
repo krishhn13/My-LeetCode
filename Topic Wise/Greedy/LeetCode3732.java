@@ -19,8 +19,6 @@ public class LeetCode3732 {
         public static void main(String[] args) {
                 Solution sol = new Solution();
 
-                // If numbers are provided as command-line args, use them; otherwise run a small
-                // demo.
                 int[] nums;
                 if (args != null && args.length > 0) {
                         nums = new int[args.length];
