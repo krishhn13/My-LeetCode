@@ -1,7 +1,5 @@
 import java.util.*;
-
-public class Greedy {
-        class Solution {
+class Solution {
                 public int minimumDifference(int[] nums, int k) {
                         if (k == 1)
                                 return 0;
@@ -18,6 +16,8 @@ public class Greedy {
                 }
         }
 
+
+public class Greedy {
         public static void main(String[] args) {
                 Scanner sc = new Scanner(System.in);
 
