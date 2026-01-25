@@ -1,40 +1,39 @@
-/**
- * Computes a scaled maximum product based on the two largest absolute values in an integer array.
- *
- * <p>This method scans the input array once, tracking the largest ({@code max1}) and second-largest
- * ({@code max2}) values after converting each element to its absolute value. It then returns
- * {@code max1 * max2 * 100000L} as a {@code long}.</p>
- *
- * <h2>Algorithm</h2>
- * <ol>
- *   <li>Initialize {@code max1} and {@code max2} to 0.</li>
- *   <li>For each element {@code n} in {@code nums}:
- *     <ul>
- *       <li>Replace {@code n} with {@code abs(n)}.</li>
- *       <li>If {@code n > max1}: shift {@code max1} into {@code max2}, then set {@code max1 = n}.</li>
- *       <li>Else if {@code n > max2}: set {@code max2 = n}.</li>
- *     </ul>
- *   </li>
- *   <li>Return {@code max1 * max2 * 100000L}.</li>
- * </ol>
- *
- * <h2>Notes and edge cases</h2>
- * <ul>
- *   <li>If {@code nums} has fewer than two elements, or if all absolute values are 0, the result may be 0
- *       because {@code max1} and/or {@code max2} will remain 0.</li>
- *   <li>This uses absolute values, so negative numbers contribute by magnitude (e.g., -7 is treated as 7).</li>
- *   <li>{@code Math.abs(Integer.MIN_VALUE)} overflows and returns {@code Integer.MIN_VALUE} (still negative),
- *       which may affect correctness for that specific value.</li>
- *   <li>The result is computed in {@code long} to reduce overflow risk, but extremely large inputs can still
- *       overflow {@code long} after multiplication.</li>
- * </ul>
- *
- * <h2>Complexity</h2>
- * <ul>
- *   <li>Time: O(n) — single pass through the array.</li>
- *   <li>Space: O(1) — constant extra storage.</li>
- * </ul>
- *
- * @param nums the input array of integers
- * @return the product of the two largest absolute values in {@code nums}, multiplied by {@code 100000}
- */
+## Approach (LeetCode style)
+
+We need the **two largest absolute values** in the array.  
+Scan once, keep track of the largest (`max1`) and second largest (`max2`) absolute values, then return:
+
+`max1 * max2 * 100000`
+
+### Steps
+1. Initialize `max1 = 0`, `max2 = 0`.
+2. For each number `x` in `nums`:
+        - Set `x = abs(x)`.
+        - If `x > max1`: update `max2 = max1`, `max1 = x`.
+        - Else if `x > max2`: update `max2 = x`.
+3. Return `max1 * max2 * 100000L`.
+
+### Notes
+- If the array has fewer than 2 elements, or all values are `0`, the result will be `0`.
+- `Math.abs(Integer.MIN_VALUE)` overflows in Java and stays negative; handle separately if needed.
+
+### Complexity
+- **Time:** `O(n)` (single pass)
+- **Space:** `O(1)`
+
+### Java snippet
+```java []
+long max1 = 0, max2 = 0;
+
+for (int v : nums) {
+         long x = Math.abs((long) v); // use long to avoid abs(int) overflow in most cases
+         if (x > max1) {
+                  max2 = max1;
+                  max1 = x;
+         } else if (x > max2) {
+                  max2 = x;
+         }
+}
+
+return max1 * max2 * 100000L;
+```
