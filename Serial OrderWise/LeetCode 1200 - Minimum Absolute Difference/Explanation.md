@@ -38,7 +38,7 @@ This matches the reference code: one loop to find `mini`, another loop to build 
 - Extra space (excluding output): `O(1)` / `O(log n)` depending on sorting implementation
 
 ### Reference Code (Java)
-```java
+```java []
 class Solution {
 	public List<List<Integer>> minimumAbsDifference(int[] arr) {
 		int mini = (int) 1e9;
