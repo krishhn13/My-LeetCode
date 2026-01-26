@@ -40,6 +40,7 @@ By trying both choices whenever allowed, we explore all valid combinations **exa
 - **Time:** `O(Cn * n)`, where `Cn` is the `n`th Catalan number (number of valid combinations). The `n` factor comes from constructing strings of length `2n`.
 - **Space:** `O(n)` recursion depth (excluding the output list).
 
+### Solution 
 ```java []
 class Solution {
         public List<String> generateParenthesis(int n) {
