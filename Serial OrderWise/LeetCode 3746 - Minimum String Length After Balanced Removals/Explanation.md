@@ -1,5 +1,4 @@
 ### Approach
-
 - Since each valid removal deletes exactly one `'a'` and one `'b'`, the total number of removals is limited by the smaller of the two counts.
 - After removing all possible opposite pairs, only the majority character (all `'a'` or all `'b'`) can remain.
 - Therefore, the final length is the absolute difference between the counts of `'a'` and `'b'`.
