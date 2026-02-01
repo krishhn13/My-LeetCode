@@ -1,7 +1,7 @@
 class Solution {
     public int possibleStringCount(String word) {
         int n = word.length();
-        int total = 1; 
+        int total = 1;
         int i = 0;
         while (i < n) {
             int j = i;
