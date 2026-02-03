@@ -14,8 +14,7 @@ public:
             adj[j].push_back(i);
         }
     }
-    inline long long dfs(int i, vector<int> &values, int k)
-    {
+    inline long long dfs(int i, vector<int> &values, int k) {
         visited[i] = 1;
         long long sum = values[i];
         for (int j : adj[i])
