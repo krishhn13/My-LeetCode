@@ -30,7 +30,6 @@ public:
     {
         adj.resize(n);
         build_adj(n, edges, values);
-
         dfs(0, values, k);
 
         return ans;
