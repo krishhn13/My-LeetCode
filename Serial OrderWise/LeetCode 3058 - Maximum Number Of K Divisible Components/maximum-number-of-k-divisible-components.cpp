@@ -29,7 +29,6 @@ public:
     int maxKDivisibleComponents(int n, vector<vector<int>>& edges, vector<int>& values, int k) 
     {
         adj.resize(n);
-    
         build_adj(n, edges, values);
 
         dfs(0, values, k);
