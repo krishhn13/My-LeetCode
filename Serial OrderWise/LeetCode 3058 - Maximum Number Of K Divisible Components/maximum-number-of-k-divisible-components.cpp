@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Solution
-{
+class Solution {
 public:
     int ans = 0;
     vector<vector<int>> adj;
