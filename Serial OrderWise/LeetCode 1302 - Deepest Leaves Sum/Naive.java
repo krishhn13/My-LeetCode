@@ -39,21 +39,15 @@ class Solution {
 
 public class Naive {
         public static void main(String[] args) {
-               
-
                 TreeNode root = new TreeNode(1);
                 root.left = new TreeNode(2);
                 root.right = new TreeNode(3);
-
                 root.left.left = new TreeNode(4);
                 root.left.right = new TreeNode(5);
                 root.right.right = new TreeNode(6);
-
                 root.left.left.left = new TreeNode(7);
-
                 Solution sol = new Solution();
                 int ans = sol.deepestLeavesSum(root);
-
-                System.out.println(ans); // expected output: 7
+                System.out.println(ans);
         }
 }
