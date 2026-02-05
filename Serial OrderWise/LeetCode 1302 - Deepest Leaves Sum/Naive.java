@@ -39,14 +39,7 @@ class Solution {
 
 public class Naive {
         public static void main(String[] args) {
-                // Tree:
-                // 1
-                // / \
-                // 2 3
-                // / \ \
-                // 4 5 6
-                // /
-                // 7
+               
 
                 TreeNode root = new TreeNode(1);
                 root.left = new TreeNode(2);
