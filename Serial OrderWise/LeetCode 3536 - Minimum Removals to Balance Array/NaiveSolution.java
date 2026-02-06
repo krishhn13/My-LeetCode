@@ -2,6 +2,12 @@ import java.util.*;
 
 class Solution {
         public int minRemoval(int[] nums, int k) {
+                /*
+                ----> My First thought
+                        1. Sort karna hai array ko
+                        2. Har Element ko min maanke k*ele, then find ele which is less than or equal  to the k*ele
+                        3. unke indices minus karke dekhege ki min ele kismei krne padre h
+                */
                 Arrays.sort(nums);
                 int min = Integer.MAX_VALUE;
                 for (int i = 0; i < nums.length; i++) {
