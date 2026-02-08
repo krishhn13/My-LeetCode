@@ -1,23 +1,22 @@
 class Solution {
         public int dominantIndices(int[] nums) {
                 int count = 0;
+                double avg = 0;
+                for (int i : nums) {
+                        avg += i;
+                }
+                int len = nums.length - 1;
                 for (int i = 0; i < nums.length; i++) {
-                        if (nums[i] * 1.0 > avg(nums, i)) {
+                        if (len > 0 && nums[i] * 1.0 > (avg - nums[i]) / len) {
                                 count++;
                         }
+                        len--;
+                        avg -= nums[i];
                 }
                 return count;
         }
-
-        private double avg(int[] nums, int idx) {
-                double len = nums.length - idx - 1;
-                double sum = 0;
-                for (int i = idx + 1; i < nums.length; i++) {
-                        sum += nums[i];
-                }
-                return sum / len;
-        }
 }
+
 public class Optimal {
         public static void main(String[] args) {
                 Solution sol = new Solution();
