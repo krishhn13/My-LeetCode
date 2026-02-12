@@ -22,6 +22,7 @@ class Solution {
                 return dp[n][m];
         }
 }
+
 public class Tabulation {
         public static void main(String[] args) {
                 Solution sol = new Solution();
