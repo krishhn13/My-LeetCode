@@ -1,4 +1,3 @@
-
 # LeetCode 38 - Count and Say
 
 ## Problem Statement
