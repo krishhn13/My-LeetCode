@@ -11,7 +11,7 @@ We build the sequence iteratively, where each iteration applies the `next()` fun
 
 ## Code
 
-```java
+```java []
 class Solution {
         public String countAndSay(int n) {
                 String val = "1";
