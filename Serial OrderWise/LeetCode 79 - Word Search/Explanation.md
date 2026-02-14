@@ -26,7 +26,7 @@ This solution uses **Backtracking** with a 2D visited array to explore all possi
 - **Space**: O(n × m) for the visited array
 
 ## Code
-```java
+```java []
 public class Solution {
          boolean[][] visited;
          int n, m;
