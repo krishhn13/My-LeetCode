@@ -22,7 +22,7 @@ class Solution {
 public class Optimised {
         public static void main(String[] args) {
                 Solution sol = new Solution();
-                int[] arr = { 2, 2, 2, 0, 1};
+                int[] arr = { 2, 2, 2, 0, 1 };
                 System.out.println(sol.findMin(arr));
         }
 }
