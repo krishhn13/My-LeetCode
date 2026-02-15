@@ -1,3 +1,4 @@
+import java.util.*;
 class Pair{
     String word;
     int level;
