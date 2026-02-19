@@ -12,3 +12,10 @@ class Solution {
         return (int)ans;
     }
 }
+
+public class Bitwise {
+        public static void main(String[] args) {
+                Solution sol = new Solution();
+                System.out.println(sol.concatenatedBinary(12));
+        }
+}
