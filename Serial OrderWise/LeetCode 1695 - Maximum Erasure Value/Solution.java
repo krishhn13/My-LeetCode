@@ -1,3 +1,5 @@
+import java.util.Set;
+
 class Solution {
         public int maximumUniqueSubarray(int[] nums) {
                 Set<Integer> seen = new HashSet<>();
