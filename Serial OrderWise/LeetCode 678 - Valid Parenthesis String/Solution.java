@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Solution {
         public boolean checkValidString(String s) {
                 Stack<Integer> leftParen = new Stack<>();
