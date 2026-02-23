@@ -3,7 +3,6 @@ class Solution {
                 String rev = new StringBuilder(s).reverse().toString();
                 String patt = s + "#" + rev;
                 int[] lps = build(patt);
-                // System.out.println(Arrays.toString(lps));
                 int palLen = lps[lps.length - 1];
                 return rev.substring(0, s.length() - palLen) + s;
         }
