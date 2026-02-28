@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
         public long[] getDistances(int[] a) {
-                HashMap<Integer, List<Integer>> map = new HashMap<>();
+                Map<Integer, List<Integer>> map = new HashMap<>();
                 for (int i = 0; i < a.length; i++) {
                         map.computeIfAbsent(a[i], k -> new ArrayList<>()).add(i);
                 }
