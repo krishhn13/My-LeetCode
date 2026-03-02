@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
         public String[] findRelativeRanks(int[] score) {
                 PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
