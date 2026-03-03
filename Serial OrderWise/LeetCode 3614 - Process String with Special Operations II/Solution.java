@@ -1,4 +1,4 @@
- class Solution {
+class Solution {
         public char processStr(String s, long k) {
                 long len = 0;
                 for (char c : s.toCharArray()) {
