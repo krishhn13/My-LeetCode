@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
         public int longestBalanced(int[] nums) {
                 int maxi = 0;
