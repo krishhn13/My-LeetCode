@@ -1,6 +1,5 @@
 import java.util.*;
-/*
-// Definition for a Node.
+
 class Node {
     public int val;
     public List<Node> children;
@@ -16,7 +15,7 @@ class Node {
         children = _children;
     }
 }
-*/
+
 
 class Solution {
         List<Integer> ans = new ArrayList<>();
