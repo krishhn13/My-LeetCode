@@ -1,4 +1,4 @@
-
+import java.util.*;
 /*
 // Definition for a Node.
 class Node {
@@ -19,13 +19,15 @@ class Node {
 */
 
 class Solution {
-    List<Integer> ans = new ArrayList<>();
-    public List<Integer> postorder(Node root) {
-        if(root==null) return ans;
-        for(Node i : root.children) {
-            postorder(i);
+        List<Integer> ans = new ArrayList<>();
+
+        public List<Integer> postorder(Node root) {
+                if (root == null)
+                        return ans;
+                for (Node i : root.children) {
+                        postorder(i);
+                }
+                ans.add(root.val);
+                return ans;
         }
-        ans.add(root.val);
-        return ans;
-    }
 }
