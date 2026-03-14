@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private int solve(int[] arr, int k) {
         int n = arr.length;
