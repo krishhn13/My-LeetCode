@@ -2,7 +2,6 @@ class Solution {
     public double calculateTax(int[][] nums, int income) {
         if(income == 0) return 0;
         double tax = 0;
-        boolean huaKya = false;
         for(int i = 0;i<nums.length;i++) {
             if(i==0) {
                 if(nums[i][0]<income) {
