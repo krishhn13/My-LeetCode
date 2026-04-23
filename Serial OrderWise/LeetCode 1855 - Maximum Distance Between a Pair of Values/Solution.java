@@ -8,8 +8,7 @@ class Solution {
                                 j++;
                         } else {
                                 i++;
-                                if (i > j)
-                                        j = i;
+                                if (i > j) j = i;
                         }
                 }
                 return maxi;
