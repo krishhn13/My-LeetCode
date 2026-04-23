@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public long[] distance(int[] a) {
        HashMap<Integer,List<Integer>> map=new HashMap<>();
