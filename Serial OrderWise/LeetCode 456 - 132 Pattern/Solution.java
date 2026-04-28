@@ -3,7 +3,9 @@ import java.util.*;
 class Solution {
         public boolean find132pattern(int[] nums) {
                 int n = nums.length;
-                if (n < 3) return false;
+                if (n < 3) {
+                        return false;
+                }
                 Stack<Integer> stack = new Stack<>();
                 int third = Integer.MIN_VALUE;
                 for (int i = n - 1; i >= 0; i--) {
