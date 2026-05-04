@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
         public int numComponents(ListNode head, int[] nums) {
                 Set<Integer> set = new HashSet<>();
