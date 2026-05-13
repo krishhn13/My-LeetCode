@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Solution {
     public String evaluate(String s, List<List<String>> knowledge) {
         Map<String, String> map = new HashMap<>();
@@ -13,7 +14,7 @@ class Solution {
         for (char ch : s.toCharArray()) {
             if (ch == '(') {
                 insideBracket = true;
-                key.setLength(0); 
+                key.setLength(0);
             } else if (ch == ')') {
                 insideBracket = false;
                 String value = map.getOrDefault(key.toString(), "?");
